@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlayRoot"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/overlay_bg"
+    android:elevation="8dp">
+
+    <!-- Drag handle -->
+    <View
+        android:id="@+id/dragHandle"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#20FFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Eval row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/tvEval"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Eval: —"
+                android:textColor="#8B949E" android:textSize="11sp"/>
+            <TextView android:id="@+id/tvStatus"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="idle" android:textColor="#484F58" android:textSize="10sp"/>
+        </LinearLayout>
+
+        <!-- Best move -->
+        <TextView android:id="@+id/tvBestMove"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Best: —"
+            android:textColor="#3FB950" android:textSize="22sp" android:textStyle="bold"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Continuation -->
+        <TextView android:id="@+id/tvLine"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="" android:textColor="#484F58" android:textSize="10sp"
+            android:singleLine="true" android:ellipsize="end"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Buttons -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="end" android:layout_marginTop="8dp">
+
+            <Button android:id="@+id/btnAnalyze"
+                android:layout_width="0dp" android:layout_height="32dp"
+                android:layout_weight="1"
+                android:text="SCAN" android:textSize="10sp"
+                android:backgroundTint="#238636" android:textColor="#ffffff"
+                android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btnAuto"
+                android:layout_width="0dp" android:layout_height="32dp"
+                android:layout_weight="1"
+                android:text="AUTO" android:textSize="10sp"
+                android:backgroundTint="#30363D" android:textColor="#8B949E"
+                android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btnClose"
+                android:layout_width="36dp" android:layout_height="32dp"
+                android:text="✕" android:textSize="11sp"
+                android:backgroundTint="#30363D" android:textColor="#f85149"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
